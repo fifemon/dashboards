@@ -47,7 +47,7 @@
             "Memory Utilized": "#3F6833"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 8,
@@ -138,7 +138,7 @@
             "Memory Utilized": "#3F6833"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 8,
@@ -228,7 +228,7 @@
             "Memory Utilized": "#3F6833"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 8,
@@ -328,7 +328,7 @@
             "Unusable": "#890F02"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 8,
@@ -438,7 +438,7 @@
             "Unusable": "#890F02"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 8,
@@ -548,7 +548,7 @@
             "Unusable": "#890F02"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 8,
@@ -667,7 +667,7 @@
             "argoneut": "#EAB839"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 7,
@@ -751,7 +751,7 @@
             "argoneut": "#EAB839"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 7,
@@ -844,7 +844,7 @@
             "argoneut": "#EAB839"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 7,
@@ -928,7 +928,7 @@
             "argoneut": "#EAB839"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 7,
@@ -1012,7 +1012,7 @@
             "argoneut": "#EAB839"
           },
           "bars": false,
-          "datasource": "graphite-dev",
+          "datasource": "fifemon-graphite",
           "editable": true,
           "error": false,
           "fill": 7,
@@ -1135,7 +1135,7 @@
           "text": "gpgrid",
           "value": "gpgrid"
         },
-        "datasource": "graphite",
+        "datasource": "fifemon-graphite",
         "includeAll": false,
         "label": "Cluster",
         "multi": true,
