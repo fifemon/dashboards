@@ -1,0 +1,664 @@
+{
+  "id": 4,
+  "title": "User Batch Jobs",
+  "originalTitle": "User Batch Jobs",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "150px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": true,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "height": "",
+          "id": 7,
+          "leftYAxisLabel": "",
+          "legend": {
+            "alignAsTable": false,
+            "avg": true,
+            "current": false,
+            "max": true,
+            "min": true,
+            "rightSide": true,
+            "show": true,
+            "total": true,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "rightYAxisLabel": "",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "alias(clusters.$cluster.jobs.users.$user.running.totals.count_recent, 'Started')",
+              "textEditor": true
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Recent Jobs Started",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "none",
+            "none"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": true,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "height": "",
+          "id": 8,
+          "leftYAxisLabel": "",
+          "legend": {
+            "alignAsTable": false,
+            "avg": true,
+            "current": false,
+            "max": true,
+            "min": true,
+            "rightSide": true,
+            "show": true,
+            "total": true,
+            "values": true
+          },
+          "lines": false,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "rightYAxisLabel": "",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "alias(clusters.$cluster.jobs.users.$user.idle.totals.count_recent, 'Submitted')",
+              "textEditor": true
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Recent Jobs Submitted",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "none",
+            "none"
+          ]
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "Quota": "#890F02"
+          },
+          "bars": false,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 7,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "thresholdLine": true
+          },
+          "id": 6,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 0,
+          "links": [],
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "Quota",
+              "fill": 0
+            }
+          ],
+          "span": 6,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "alias(keepLastValue(sumSeries(clusters.$cluster.jobs.users.$user.running.totals.count), 2), 'Running')",
+              "textEditor": false
+            },
+            {
+              "refId": "B",
+              "target": "alias(keepLastValue(sumSeries(clusters.$cluster.jobs.users.$user.idle.totals.count), 2), 'Idle')",
+              "textEditor": false
+            },
+            {
+              "refId": "C",
+              "target": "alias(keepLastValue(sumSeries(clusters.$cluster.jobs.users.$user.held.totals.count), 2), 'Held')",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Job Summary",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "individual"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "none",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 0,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": 100,
+            "leftMin": 0,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": 75,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": 50,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 3,
+          "leftYAxisLabel": "",
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "alias(keepLastValue(clusters.$cluster.jobs.users.$user.running.totals.efficiency, 2), 'CPU Efficiency')",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "CPU Efficiency",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "percent",
+            "short"
+          ]
+        }
+      ],
+      "title": "Row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "aliasColors": {
+            "Quota": "#890F02"
+          },
+          "bars": false,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 7,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "thresholdLine": true
+          },
+          "id": 4,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 0,
+          "links": [],
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "Idle",
+              "fill": 0,
+              "linewidth": 2,
+              "stack": false,
+              "yaxis": 2
+            }
+          ],
+          "span": 6,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "aliasByNode(keepLastValue(clusters.$cluster.jobs.users.$user.running.sites.*.count, 2), 7)",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Running by Site",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "individual"
+          },
+          "transparent": false,
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "none",
+            "none"
+          ]
+        }
+      ],
+      "title": "New row"
+    }
+  ],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "collapse": false,
+    "enable": true,
+    "notice": false,
+    "now": true,
+    "nowDelay": "",
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "status": "Stable",
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ],
+    "type": "timepicker"
+  },
+  "templating": {
+    "list": [
+      {
+        "allFormat": "glob",
+        "current": {
+          "tags": [],
+          "text": "cms-lpc",
+          "value": "cms-lpc"
+        },
+        "datasource": "fifemon-graphite",
+        "includeAll": false,
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "cluster",
+        "options": [
+          {
+            "selected": true,
+            "text": "cms-lpc",
+            "value": "cms-lpc"
+          }
+        ],
+        "query": "clusters.*",
+        "refresh_on_load": false,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "allFormat": "glob",
+        "current": {
+          "tags": [],
+          "text": "kdilsiz",
+          "value": "kdilsiz"
+        },
+        "datasource": "fifemon-graphite",
+        "includeAll": false,
+        "name": "user",
+        "options": [
+          {
+            "selected": false,
+            "text": "abarker",
+            "value": "abarker"
+          },
+          {
+            "selected": false,
+            "text": "abdollah",
+            "value": "abdollah"
+          },
+          {
+            "selected": false,
+            "text": "aman30",
+            "value": "aman30"
+          },
+          {
+            "selected": false,
+            "text": "andrewj",
+            "value": "andrewj"
+          },
+          {
+            "selected": false,
+            "text": "awhitbe1",
+            "value": "awhitbe1"
+          },
+          {
+            "selected": false,
+            "text": "bmahakud",
+            "value": "bmahakud"
+          },
+          {
+            "selected": false,
+            "text": "cjs",
+            "value": "cjs"
+          },
+          {
+            "selected": false,
+            "text": "cmantill",
+            "value": "cmantill"
+          },
+          {
+            "selected": false,
+            "text": "elifalba",
+            "value": "elifalba"
+          },
+          {
+            "selected": false,
+            "text": "gurpinar",
+            "value": "gurpinar"
+          },
+          {
+            "selected": false,
+            "text": "hqu",
+            "value": "hqu"
+          },
+          {
+            "selected": false,
+            "text": "jbradmil",
+            "value": "jbradmil"
+          },
+          {
+            "selected": false,
+            "text": "jdulemba",
+            "value": "jdulemba"
+          },
+          {
+            "selected": true,
+            "text": "kdilsiz",
+            "value": "kdilsiz"
+          },
+          {
+            "selected": false,
+            "text": "knash",
+            "value": "knash"
+          },
+          {
+            "selected": false,
+            "text": "lcorcodi",
+            "value": "lcorcodi"
+          },
+          {
+            "selected": false,
+            "text": "lhx",
+            "value": "lhx"
+          },
+          {
+            "selected": false,
+            "text": "mbhat",
+            "value": "mbhat"
+          },
+          {
+            "selected": false,
+            "text": "mkrohn",
+            "value": "mkrohn"
+          },
+          {
+            "selected": false,
+            "text": "ndefilip",
+            "value": "ndefilip"
+          },
+          {
+            "selected": false,
+            "text": "nmccoll",
+            "value": "nmccoll"
+          },
+          {
+            "selected": false,
+            "text": "pedrok",
+            "value": "pedrok"
+          },
+          {
+            "selected": false,
+            "text": "ptader",
+            "value": "ptader"
+          },
+          {
+            "selected": false,
+            "text": "ptan",
+            "value": "ptan"
+          },
+          {
+            "selected": false,
+            "text": "rebassoo",
+            "value": "rebassoo"
+          },
+          {
+            "selected": false,
+            "text": "sbein",
+            "value": "sbein"
+          },
+          {
+            "selected": false,
+            "text": "skhi",
+            "value": "skhi"
+          },
+          {
+            "selected": false,
+            "text": "sushil",
+            "value": "sushil"
+          },
+          {
+            "selected": false,
+            "text": "tahuang",
+            "value": "tahuang"
+          },
+          {
+            "selected": false,
+            "text": "tiradani",
+            "value": "tiradani"
+          },
+          {
+            "selected": false,
+            "text": "tote",
+            "value": "tote"
+          },
+          {
+            "selected": false,
+            "text": "yik",
+            "value": "yik"
+          },
+          {
+            "selected": false,
+            "text": "zhenhu",
+            "value": "zhenhu"
+          }
+        ],
+        "query": "clusters.*.jobs.users.*",
+        "refresh": true,
+        "refresh_on_load": false,
+        "type": "query"
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": "5m",
+  "schemaVersion": 11,
+  "version": 2,
+  "links": [
+    {
+      "icon": "external link",
+      "includeVars": true,
+      "keepTime": true,
+      "tags": [
+        "user"
+      ],
+      "type": "dashboards"
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "id": 2,
+  "title": "Cluster Health",
+  "originalTitle": "Cluster Health",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": true,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "200px",
+      "panels": [
+        {
+          "aliasColors": {
+            "TotalSchedulerJobsRunning": "#967302"
+          },
+          "bars": true,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "thresholdLine": false
+          },
+          "id": 61,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": false,
+          "linewidth": 2,
+          "links": [],
+          "minSpan": 6,
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeat": "schedd",
+          "repeatIteration": 1441216411612,
+          "scopedVars": {
+            "schedd": {
+              "selected": false,
+              "text": "cmsosgce2_fnal_gov",
+              "value": "cmsosgce2_fnal_gov"
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "aliasByNode(clusters.$cluster.schedds.*.TotalIdleJobs, 3)",
+              "textEditor": true
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Idle Jobs",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {
+            "TotalSchedulerJobsRunning": "#967302"
+          },
+          "bars": true,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "thresholdLine": false
+          },
+          "id": 73,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": false,
+          "linewidth": 2,
+          "links": [],
+          "minSpan": 6,
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "B",
+              "target": "aliasByNode(clusters.$cluster.schedds.*.TotalRunningJobs, 3)",
+              "textEditor": true
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Running Jobs",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "repeat": null,
+      "scopedVars": {
+        "schedd": {
+          "selected": true,
+          "text": "cmsosgce2_fnal_gov",
+          "value": "cmsosgce2_fnal_gov"
+        }
+      },
+      "showTitle": false,
+      "title": "Plots"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
+        {
+          "columns": [
+            {
+              "text": "Min",
+              "value": "min"
+            },
+            {
+              "text": "Max",
+              "value": "max"
+            },
+            {
+              "text": "Avg",
+              "value": "avg"
+            },
+            {
+              "text": "Current",
+              "value": "current"
+            }
+          ],
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fontSize": "100%",
+          "id": 72,
+          "isNew": true,
+          "links": [],
+          "pageSize": null,
+          "scroll": false,
+          "showHeader": true,
+          "sort": {
+            "col": 4,
+            "desc": true
+          },
+          "span": 12,
+          "styles": [
+            {
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "pattern": "Time",
+              "type": "date"
+            },
+            {
+              "colorMode": "cell",
+              "colors": [
+                "rgba(50, 172, 45, 0.97)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(245, 54, 54, 0.9)"
+              ],
+              "decimals": 1,
+              "pattern": "/.*/",
+              "thresholds": [
+                ".75",
+                ".95"
+              ],
+              "type": "number",
+              "unit": "percentunit"
+            }
+          ],
+          "targets": [
+            {
+              "refId": "A",
+              "target": "aliasByNode(clusters.$cluster.{schedds,collectors,negotiators}.*.RecentDaemonCoreDutyCycle, 2, 3)"
+            }
+          ],
+          "title": "DaemonCore Duty Cycle",
+          "transform": "timeseries_aggregations",
+          "type": "table"
+        }
+      ],
+      "title": "New row"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "200px",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": 60,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": 300,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 42,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "fifebatchgpvmhead1_fnal_gov",
+              "yaxis": 1
+            },
+            {
+              "alias": "DaemonCoreDutyCycle",
+              "yaxis": 2
+            },
+            {
+              "alias": "RecentDaemonCoreDutyCycle",
+              "yaxis": 2
+            }
+          ],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "aliasByNode(clusters.$cluster.negotiators.*.LastNegotiationCycleDuration0, 3)",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Negotiation Cycle Duration",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "s",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 62,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "fifebatchgpvmhead1_fnal_gov",
+              "yaxis": 1
+            },
+            {
+              "alias": "DaemonCoreDutyCycle",
+              "yaxis": 2
+            },
+            {
+              "alias": "LastNegotiationCycleMatchRate0",
+              "yaxis": 2
+            },
+            {
+              "alias": "LastNegotiationCycleTotalSlots0",
+              "yaxis": 2
+            },
+            {
+              "alias": "LastNegotiationCycleCandidateSlots0",
+              "yaxis": 2
+            }
+          ],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "aliasByNode(clusters.$cluster.negotiators.*.LastNegotiationCycleMatches0, 3)",
+              "textEditor": true
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Negotiator Matches",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "fifemon-graphite",
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "leftMin": null,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 71,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "null as zero",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "fifebatchgpvmhead1_fnal_gov",
+              "yaxis": 1
+            },
+            {
+              "alias": "DaemonCoreDutyCycle",
+              "yaxis": 2
+            },
+            {
+              "alias": "LastNegotiationCycleMatchRate0",
+              "yaxis": 2
+            },
+            {
+              "alias": "LastNegotiationCycleTotalSlots0",
+              "yaxis": 2
+            },
+            {
+              "alias": "LastNegotiationCycleCandidateSlots0",
+              "yaxis": 2
+            }
+          ],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "B",
+              "target": "aliasByNode(clusters.$cluster.negotiators.*.LastNegotiationCycleCandidateSlots0, 3)",
+              "textEditor": true
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Negotiator Candidate Slots",
+          "tooltip": {
+            "msResolution": false,
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "title": "New row"
+    }
+  ],
+  "time": {
+    "from": "now-1d",
+    "to": "now"
+  },
+  "timepicker": {
+    "collapse": false,
+    "enable": true,
+    "notice": false,
+    "now": true,
+    "refresh_intervals": [
+      "5m"
+    ],
+    "status": "Stable",
+    "time_options": [
+      "1d",
+      "7d",
+      "30d",
+      "60d",
+      "90d"
+    ],
+    "type": "timepicker"
+  },
+  "templating": {
+    "list": [
+      {
+        "allFormat": "glob",
+        "current": {
+          "tags": [],
+          "text": "cms-lpc",
+          "value": "cms-lpc"
+        },
+        "datasource": "fifemon-graphite",
+        "includeAll": false,
+        "label": "Cluster",
+        "multi": false,
+        "multiFormat": "glob",
+        "name": "cluster",
+        "options": [
+          {
+            "selected": true,
+            "text": "cms-lpc",
+            "value": "cms-lpc"
+          }
+        ],
+        "query": "clusters.*",
+        "refresh_on_load": false,
+        "regex": "",
+        "type": "query"
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": "5m",
+  "schemaVersion": 11,
+  "version": 4,
+  "links": []
+}
