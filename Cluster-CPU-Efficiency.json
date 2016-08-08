@@ -435,7 +435,7 @@
           "targets": [
             {
               "refId": "A",
-              "target": "aliasByNode(clusters.$cluster.jobs.experiments.none.users.*.running.totals.efficiency, 6)",
+              "target": "aliasByNode(clusters.$cluster.jobs.experiments.*.users.*.running.totals.efficiency, 6)",
               "textEditor": false
             }
           ],
